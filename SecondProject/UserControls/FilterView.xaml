@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="SecondProject.UserControls.FilterView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+               DataContext="{Binding Source={StaticResource Locator}, Path=Filter}" Height="585" Width="400" 
+>
+    <Grid  Background="BurlyWood">
+
+        <ListBox Width="160" Background="BurlyWood" HorizontalAlignment="Center" Margin="0,0,0,266">
+            <CheckBox IsChecked="{Binding CheckName}" Content="Name" Margin="25"  />
+            <CheckBox IsChecked="{Binding CheckIsbm}" Content="ISBM" Margin="25"/>
+            <CheckBox IsChecked="{Binding CheckAuthor}" Content="Author" Margin="25" />
+            <CheckBox IsChecked="{Binding CheckPrice}" Content="Price" Margin="25"/>
+        </ListBox>
+        <StackPanel>
+        <Label Content="Name"  VerticalAlignment="Top" Width="50" HorizontalAlignment="Left"/>
+            <TextBox Text="{Binding FilterName, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" PreviewTextInput="WordValidationTextBox" HorizontalAlignment="Left" Height="30"  TextWrapping="Wrap" VerticalAlignment="Top" Width="110" />
+
+
+            <Label Content="ISBM"  VerticalAlignment="Top" Width="50" HorizontalAlignment="Left"/>
+            <TextBox Text="{Binding FilterIsbm , UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" PreviewTextInput="NumberValidationTextBox" HorizontalAlignment="Left" Height="30" Width="110" />
+            
+            <Label Content="Author"  VerticalAlignment="Top" Width="50" HorizontalAlignment="Left"/>
+        <TextBox Text="{Binding FilterAuthor, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="30"  TextWrapping="Wrap" VerticalAlignment="Top" Width="110" />
+
+            <Label Content="Price"  VerticalAlignment="Top" Width="50" HorizontalAlignment="Left"/>
+            <TextBox Text="{Binding FilterPrice, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" PreviewTextInput="NumberValidationTextBox" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="110"  />
+            <Label/>
+            <Button Content="Search" Width="74"  HorizontalAlignment="Left" Height="26" VerticalAlignment="Bottom" Command="{Binding SearchBen }"/>
+            <Label/>
+            <Button Height="35" Width="80" Content="Show-All" Command="{Binding ShowAll}" />
+
+        </StackPanel>
+
+    </Grid>
+</UserControl>

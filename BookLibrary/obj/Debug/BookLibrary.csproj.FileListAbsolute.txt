@@ -1,0 +1,6 @@
+C:\Users\Yonatan aduk\source\repos\SecondProject\BookLibrary\bin\Debug\BookLibrary.dll
+C:\Users\Yonatan aduk\source\repos\SecondProject\BookLibrary\bin\Debug\BookLibrary.pdb
+C:\Users\Yonatan aduk\source\repos\SecondProject\BookLibrary\obj\Debug\BookLibrary.csproj.AssemblyReference.cache
+C:\Users\Yonatan aduk\source\repos\SecondProject\BookLibrary\obj\Debug\BookLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Yonatan aduk\source\repos\SecondProject\BookLibrary\obj\Debug\BookLibrary.dll
+C:\Users\Yonatan aduk\source\repos\SecondProject\BookLibrary\obj\Debug\BookLibrary.pdb

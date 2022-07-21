@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="SecondProject.UserControls.TextBoxView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+               DataContext="{Binding Source={StaticResource Locator}, Path=TextBox}" Height="585" Width="400">
+    <TabControl Background="LightBlue">
+        <TabItem Header="Book" Background="Cyan">
+            <GroupItem>
+                <WrapPanel>
+                    <StackPanel Margin="7">
+                        <TextBlock Text="Book Name:" />
+                        <TextBlock Text="Book Author Name: " />
+                        <TextBlock Text="Book ISBN:" />
+                        <TextBlock Text="Book Price:" />
+                        <TextBlock Text="Book Copies:"/>
+                        <TextBlock Text="Book Date Print:"/>
+                        <TextBlock Text="Book Discount:"/>
+                        <TextBlock Text="Book In Stock:"/>
+                        <TextBlock Text="Book Catgory:"/>
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBox Text="{Binding ItemName ,Mode=TwoWay}" PreviewTextInput="WordValidationTextBox"  />
+                        <TextBox Text="{Binding ItemAuthor ,Mode=TwoWay}" PreviewTextInput="WordValidationTextBox"/>
+                        <TextBox Text="{Binding ItemISBM ,Mode=TwoWay}" PreviewTextInput="NumberValidationTextBox"/>
+                        <TextBox Text="{Binding ItemPrice ,Mode=TwoWay}" PreviewTextInput="NumberValidationTextBox"/>
+                        <TextBox Text="{Binding ItemCopie ,Mode=TwoWay}" PreviewTextInput="NumberValidationTextBox"/>
+                        <TextBox Text="{Binding ItemDateprint ,Mode=TwoWay}" PreviewTextInput="NumberValidationTextBox"/>
+                        <TextBox Text="{Binding ItemDiscount,Mode=TwoWay}" PreviewTextInput="NumberValidationTextBox"/>
+                        <TextBox Text="{Binding ItemInStock ,Mode=TwoWay}" PreviewTextInput="NumberValidationTextBox"/>
+                        <ComboBox ItemsSource="{Binding Catgorybook}" SelectedItem="{Binding Catgory}"/>
+                        <Button Content="Add To Book" VerticalContentAlignment="Bottom" Command="{Binding AddBookCommand}"/>
+                    </StackPanel>
+                </WrapPanel>
+            </GroupItem>
+        </TabItem>
+        <TabItem Header="Journal" Background="BurlyWood">
+            <WrapPanel>
+                <StackPanel Margin="5">
+                    <TextBlock Text="Journal Name:"/>
+                    <TextBlock Text="Journal Author Name: "/>
+                    <TextBlock Text="Journal ISBN:"/>
+                    <TextBlock Text="Journal Price:"/>
+                    <TextBlock Text="Journal Copies:"/>
+                    <TextBlock Text="Journal Date Print:"/>
+                    <TextBlock Text="Journal Discount:"/>
+                    <TextBlock Text="Journal Catgory:"/>
+                    <TextBlock Text="Journal In Stock:"/>
+                </StackPanel>
+                <StackPanel Margin="0">
+                    <TextBox Text="{Binding ItemNameJournal,Mode=TwoWay}" PreviewTextInput="WordValidationTextBox" />
+                    <TextBox Text="{Binding ItemAuthorJournal,Mode=TwoWay}" PreviewTextInput="WordValidationTextBox"/>
+                    <TextBox Text="{Binding ItemISBMJournal,Mode=TwoWay}" PreviewTextInput="NumberValidationTextBox"/>
+                    <TextBox Text="{Binding ItemPriceJournal,Mode=TwoWay}" PreviewTextInput="NumberValidationTextBox"/>
+                    <TextBox Text="{Binding ItemCopieJournal,Mode=TwoWay}" PreviewTextInput="NumberValidationTextBox"/>
+                    <TextBox Text="{Binding ItemDateprintJournal,Mode=TwoWay}" PreviewTextInput="NumberValidationTextBox"/>
+                    <TextBox Text="{Binding ItemDiscountJournal,Mode=TwoWay}" PreviewTextInput="NumberValidationTextBox"/>
+                    <ComboBox ItemsSource="{Binding CatgoryJournal}" SelectedItem="{Binding ItemCatgoryJournal}"/>
+                    <TextBox Text="{Binding ItemInStockJournal,Mode=TwoWay}" PreviewTextInput="NumberValidationTextBox"/>
+                    <Button Content="Add To Journal" VerticalContentAlignment="Bottom" Command="{Binding AddJournalCommand}"/>
+                </StackPanel>
+            </WrapPanel>
+        </TabItem>
+    </TabControl>
+</UserControl>
